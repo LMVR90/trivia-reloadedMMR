@@ -7,7 +7,8 @@ const buttonResultArt = document.getElementById('button-result-art');
 const buttonResultScience = document.getElementById('button-result-science');
 const buttonStart = document.getElementById('button-start');
 const welcome = document.getElementById('bienvenida');
-const playAgain = document.getElementById('play-again');
+const artResult = document.getElementById('art-result');
+const scienceResult = document.getElementById('science-result');
 const buttonPlayAgain = document.getElementById('button-play-again');
 const userName = document.getElementById('input-name').value;
 
@@ -16,33 +17,31 @@ const menu = () => {
   welcome.classList.add('disappear');
   mainMenu.classList.remove('disappear');
   const userName = document.getElementById('input-name').value;
-  console.log(userName);
+  /*console.log(userName);*/
   document.getElementById('user-name').innerHTML += 'Bienvenidx, ' + userName;
 }
 
 const triviaArt = () => {
-  /**/
+
   showQuestionsArt.classList.remove('disappear');
   mainMenu.classList.add('disappear');
 }
 
 const triviaScience = () => {
-  /**/
+
   showQuestionsScience.classList.remove('disappear');
   mainMenu.classList.add('disappear');
 }
 
+
 const resultTriviaArt = () => {
   showQuestionsArt.classList.add('disappear');
-  welcome.classList.add('disappear');
-  mainMenu.classList.add('disappear');
-  /*result.classList.remove('disappear');*/
+  artResult.classList.remove('disappear');
   let correctas = 0;
   const respA1 = document.getElementById('form-question1-art').value;
   const respA2 = document.getElementById('form-question2-art').value;
   const respA3 = document.getElementById('form-question3-art').value;
   const respA4 = document.getElementById('form-question4-art').value;
-  console.log(respA1);
   if (respA1 === "A1") {
     correctas++;
   }
@@ -56,21 +55,19 @@ const resultTriviaArt = () => {
     correctas++
   }
   const errores = (4 - correctas);
-  document.getElementById('results').innerHTML += "Tus resultados. Aciertos: " + correctas + " " + "/ Errores: " + errores;
-  correctas = 0;
+  document.getElementById('score').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
+
 }
 
 const resultTriviaScience = () => {
   showQuestionsScience.classList.add('disappear');
-  welcome.classList.add('disappear');
-  mainMenu.classList.add('disappear');
-  /*result.classList.remove('disappear');*/
+  scienceResult.classList.remove('disappear');
   let correctas = 0;
   const respS1 = document.getElementById('form-question1-science').value;
   const respS2 = document.getElementById('form-question2-science').value;
   const respS3 = document.getElementById('form-question3-science').value;
   const respS4 = document.getElementById('form-question4-science').value;
-  console.log(respS1);
+  /*console.log(respS1);*/
   if (respS1 === "E4") {
     correctas++;
   }
@@ -84,16 +81,15 @@ const resultTriviaScience = () => {
     correctas++
   }
   const errores = (4 - correctas);
-  document.getElementById('results').innerHTML += "Tus resultados. Aciertos: " + correctas + " " + "/ Errores: " + errores;
-  correctas = 0;
+  document.getElementById('score').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
+
 }
 
-  /*const playAgain = () => {
-  mainMenu.classList.remove('disappear');
-  result.classList.add('disappear');
-  showQuestionsScience.classList.add('disappear');
-  showQuestionsArt.classList.add('disappear');
-}*/
+const playAgain = () => {
+  welcome.classList.remove('disappear');
+  artResult.classList.add('disappear');
+  scienceResult.classList.add('disappear');
+}
 
 
 buttonArt.addEventListener('click', triviaArt);
