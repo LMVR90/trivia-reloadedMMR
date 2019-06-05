@@ -9,7 +9,7 @@ const buttonStart = document.getElementById('button-start');
 const welcome = document.getElementById('bienvenida');
 const artResult = document.getElementById('art-result');
 const scienceResult = document.getElementById('science-result');
-const buttonPlayAgain = document.getElementById('button-play-again');
+
 const userName = document.getElementById('input-name').value;
 
 const menu = () => {
@@ -87,13 +87,6 @@ const resultTriviaScience = () => {
   const errores = (4 - correctas);
   document.getElementById('score2').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
 
-}
-
-const playAgain = () => {
-  welcome.classList.remove('disappear');
-  artResult.classList.add('disappear');
-  scienceResult.classList.add('disappear');
-  document.getElementById('input-name').innerHTML += '';
 }
 
 
