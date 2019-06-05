@@ -37,6 +37,8 @@ const triviaScience = () => {
 const resultTriviaArt = () => {
   showQuestionsArt.classList.add('disappear');
   artResult.classList.remove('disappear');
+  document.getElementById('score1').innerHTML += '';
+  document.getElementById('score2').innerHTML += '';
   let correctas = 0;
   const respA1 = document.getElementById('form-question1-art').value;
   const respA2 = document.getElementById('form-question2-art').value;
@@ -55,13 +57,15 @@ const resultTriviaArt = () => {
     correctas++
   }
   const errores = (4 - correctas);
-  document.getElementById('score').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
+  document.getElementById('score1').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
 
 }
 
 const resultTriviaScience = () => {
   showQuestionsScience.classList.add('disappear');
   scienceResult.classList.remove('disappear');
+  document.getElementById('score1').innerHTML += '';
+  document.getElementById('score2').innerHTML += '';
   let correctas = 0;
   const respS1 = document.getElementById('form-question1-science').value;
   const respS2 = document.getElementById('form-question2-science').value;
@@ -81,7 +85,7 @@ const resultTriviaScience = () => {
     correctas++
   }
   const errores = (4 - correctas);
-  document.getElementById('score').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
+  document.getElementById('score2').innerHTML += '\n Aciertos: ' + correctas + '\n' + 'Errores:' + errores;
 
 }
 
@@ -89,6 +93,7 @@ const playAgain = () => {
   welcome.classList.remove('disappear');
   artResult.classList.add('disappear');
   scienceResult.classList.add('disappear');
+  document.getElementById('input-name').innerHTML += '';
 }
 
 
