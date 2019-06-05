@@ -1,4 +1,4 @@
-# trivia-reloadedMMR
+# TRIVIA
 
 <h2>Trivia reloaded. Elaborado por: Rebecca, Mariela y Marcela. Laboratoria 2019.</h2>
 
