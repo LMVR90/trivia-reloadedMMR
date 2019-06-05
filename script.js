@@ -37,6 +37,8 @@ const triviaScience = () => {
 const resultTriviaArt = () => {
   showQuestionsArt.classList.add('disappear');
   artResult.classList.remove('disappear');
+  document.getElementById('score').innerHTML += '';
+  document.getElementById('score').innerHTML += '';
   let correctas = 0;
   const respA1 = document.getElementById('form-question1-art').value;
   const respA2 = document.getElementById('form-question2-art').value;
@@ -62,6 +64,8 @@ const resultTriviaArt = () => {
 const resultTriviaScience = () => {
   showQuestionsScience.classList.add('disappear');
   scienceResult.classList.remove('disappear');
+  document.getElementById('score').innerHTML += '';
+  document.getElementById('score').innerHTML += '';
   let correctas = 0;
   const respS1 = document.getElementById('form-question1-science').value;
   const respS2 = document.getElementById('form-question2-science').value;
